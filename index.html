@@ -3,15 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Javier Alejandro González Peredia</title>
+  <title>Portafolio Profesional - Javier Alejandro González Peredia</title>
   <style>
     /* --------- Estilos Generales --------- */
     body {
       margin: 0;
       font-family: Verdana, sans-serif;
-      background: #f5f6fa;
+      background: url("https://revistasumma.com/wp-content/uploads/2023/11/tecnologia.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: #2f3640;
       line-height: 1.6;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.6);
+      z-index: -1; 
     }
 
     header {
@@ -78,7 +91,7 @@
     }
 
     .card {
-      background: white;
+      background: rgb(131, 127, 250);
       border-radius: 10px;
       padding: 1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -122,7 +135,7 @@
   <!-- Encabezado -->
   <header>
     <h1>Javier Alejandro González Peredia</h1>
-    <p>Ingeniero de Software | Desarrollo Web & Móvil | Innovación Tecnológica</p>
+    <p>Ingeniero de Software | Desarrollo Web y Móvil | Innovación Tecnológica</p>
   </header>
 
   <!-- Menú -->
@@ -150,29 +163,60 @@
       <div class="card">
         <img src="https://i.imgur.com/01BxJRQ.jpeg" alt="Sistema de Votaciones">
         <h3>Sistema de Votaciones</h3>
-        <p>Aplicación web que permite a los usuarios votar entre diferentes partidos y muestra en tiempo real el porcentaje de votos de cada uno. Proyecto desarrollado en equipo utilizando Html, SQL y tecnologías web.</p>
-        <a href="https://javier1a2.github.io/Sistema-de-votaciones/" target="_blank">Ver en GitHub</a>
+        <p>Aplicación web que permite a los usuarios participar en un proceso de votación en línea de manera sencilla y segura. 
+           Los resultados se muestran en tiempo real mediante porcentajes gráficos, lo que facilita la transparencia del proceso. 
+           Fue desarrollada en equipo utilizando <strong>HTML, SQL y tecnologías web modernas</strong>, fomentando el trabajo colaborativo y la práctica de bases de datos.</p>
+        <a href="https://github.com/Javier1A2/Sistema-de-votaciones" target="_blank">Ver en GitHub</a>
+        <br>
+        <a href="https://javier1a2.github.io/Sistema-de-votaciones/" target="_blank">Ir al sitio</a>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/0vUOTxr.jpeg" alt="Proyecto 2">
+        <img src="https://i.imgur.com/0vUOTxr.jpeg" alt="Raspberry Pi SatNOGS">
         <h3>Estación SatNOGS</h3>
-        <p>Configuración de una Raspberry Pi para recibir y procesar datos satelitales con fines de investigación.</p>
-        <a href="#">Ver en GitHub</a>
+        <p>Proyecto enfocado en la configuración de una <strong>Raspberry Pi</strong> para recibir y procesar datos de satélites con fines de investigación. 
+           La estación funciona como parte de la red colaborativa <a href="https://satnogs.org/" target="_blank">SatNOGS</a>, que integra estaciones alrededor del mundo para la observación y análisis de señales. 
+           Este proyecto me permitió aprender sobre comunicaciones satelitales, radiofrecuencia y automatización de sistemas.</p>
+        <a href="https://satnogs.org/">Más información</a>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/fRh3Ij0.png" alt="Proyecto 3">
-        <h3>Tesis Brecha Digital</h3>
-        <p>Análisis de la brecha digital y su impacto en la inserción laboral en MiPymes de Colima, México.</p>
+        <img src="https://i.imgur.com/fRh3Ij0.png" alt="Investigación brecha digital">
+        <h3>Tesis "Brecha Digital"</h3>
+        <p>Investigación académica sobre la <strong>brecha digital</strong> y su impacto en la inserción laboral, con un enfoque particular en las MiPyMEs de Colima, México. 
+           Se analiza cómo el acceso desigual a internet, dispositivos y competencias digitales influye en las oportunidades de crecimiento empresarial y empleabilidad. 
+           El trabajo incluye un marco teórico, estudios de caso locales y una propuesta de estrategias para reducir esta problemática mediante capacitación y políticas públicas enfocadas en la digitalización.</p>
         <a href="#">Más información</a>
       </div>
 
       <div class="card">
         <img src="https://i.imgur.com/IWgsJIG.jpeg" alt="Juego Jump Man">
-        <h3>Juego Jump Man</h3>
-        <p>Videojuego 2D desarrollado en equipo para el microcontrolador ESP32. Incluye pantalla LCD, joystick y audio I2S. Implementa arquitectura de doble núcleo: uno para la lógica del juego (movimiento, colisiones, puntuaciones) y otro para la gestión de audio.</p>
-        <a href="#">Ver código</a>
+        <h3>Juego "Jump Man"</h3>
+        <p>Videojuego 2D desarrollado en equipo para el microcontrolador <strong>ESP32</strong>. 
+           Incluye una pantalla LCD, joystick y salida de audio mediante protocolo I2S. 
+           La arquitectura implementa el uso de doble núcleo: uno destinado a la lógica del juego (movimiento, colisiones y puntuaciones) y otro para la gestión del audio. 
+           Fue un proyecto retador que combinó programación de bajo nivel con creatividad en el diseño del juego.</p>
+        <a href="https://github.com/bsanmur/esp32-game">Ver en GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/jOxyuFT.jpeg" alt="Sitio web responsivo">
+        <h3>Sitio web responsivo</h3>
+        <p>Proyecto orientado a mejorar la experiencia de usuario del sitio de noticias deportivas <em>Marca</em>. 
+           Se realizaron ajustes en <strong>responsividad, diseño visual y usabilidad</strong>, logrando una navegación más fluida desde distintos dispositivos. 
+           Este ejercicio permitió aplicar principios de <em>responsive design</em>, mejorar la estructura del código y optimizar la accesibilidad.</p>
+        <a href="https://github.com/Javier1A2/Pr-ctica3">Ver en GitHub</a>
+        <br>
+        <a href="https://javier1a2.github.io/Pr-ctica3/">Ir al sitio</a>
+      </div>
+
+      <div class="card">
+        <img src="https://miro.medium.com/v2/resize:fit:1358/1*3NHZI9WBGQOCwRhjDrCRqA.png" alt="App Expo React Native">
+        <h3>Aplicación móvil con Expo</h3>
+        <p>Aplicación móvil multiplataforma desarrollada con <strong>React Native y Expo</strong>, compatible con Android, iOS y Web. 
+           El entorno se configuró mediante <code>create-expo-app</code>, integrando un sistema de navegación basado en archivos y compatibilidad con Expo Go para pruebas rápidas. 
+           Este proyecto permitió comprender el desarrollo ágil de apps móviles y la importancia de contar con herramientas que faciliten la portabilidad.</p>
+        <a href="https://github.com/Javier1A2/Expo-App" target="_blank">Ver en GitHub</a>
       </div>
     </div>
   </section>
@@ -182,7 +226,7 @@
     <p>📧 Email: <a href="mailto:javiergp005@gmail.com">javiergp005@gmail.com</a></p>
     <p>
       🌐 <a href="https://www.linkedin.com/in/javier-gonzalez-peredia-1813b3340?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEFpKKkOzT5K479an50eLMA%3D%3D" target="_blank">LinkedIn</a> | 
-      💻 <a href="https://github.com/Javier1A2" target="_blank">GitHub</a>
+      💻 <a href="https://github.com/Javier1A2/Practica-4" target="_blank">GitHub</a>
     </p>
   </footer>
 </body>
