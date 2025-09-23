@@ -6,129 +6,192 @@
   <title>Portafolio Profesional - Javier Alejandro González Peredia</title>
   <style>
     /* --------- Estilos Generales --------- */
-    body {
-      margin: 0;
-      font-family: Verdana, sans-serif;
-      background: url("https://revistasumma.com/wp-content/uploads/2023/11/tecnologia.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: #2f3640;
-      line-height: 1.6;
-      position: relative;
-    }
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  background: url("https://revistasumma.com/wp-content/uploads/2023/11/tecnologia.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #2f3640;
+  line-height: 1.6;
+  position: relative;
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255,255,255,0.6);
-      z-index: -1; 
-    }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.6);
+  z-index: -1; 
+}
 
-    header {
-      background: #273c75;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+header {
+  background: #273c75;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
 
-    nav {
-      background: #192a56;
-      padding: 0.8rem;
-      text-align: center;
-    }
+nav {
+  background: #192a56;
+  padding: 0.8rem;
+  text-align: center;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-    h2 {
-      color: #273c75;
-      margin-bottom: 1rem;
-    }
+h2 {
+  color: #273c75;
+  margin-bottom: 1rem;
+}
 
-    /* --------- Sobre mí --------- */
-    #sobre-mi {
-      text-align: center;
-    }
+/* --------- Sobre mí --------- */
+#sobre-mi {
+  text-align: center;
+}
 
-    #sobre-mi img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
+#sobre-mi img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
 
-    /* --------- Proyectos --------- */
-    .proyectos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
+/* --------- Proyectos --------- */
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
 
-    .card {
-      background: rgb(131, 127, 250);
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
+.card {
+  background: rgb(131, 127, 250);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
 
-    .card:hover {
-      transform: scale(1.03);
-    }
+.card:hover {
+  transform: scale(1.03);
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .card h3 {
-      margin-top: 0.8rem;
-    }
+.card h3 {
+  margin-top: 0.8rem;
+}
 
-    /* --------- Contacto --------- */
-    footer {
-      background: #273c75;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+.card p {
+  font-size: 1rem;
+}
 
-    footer a {
-      color: #fbc531;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+/* --------- Contacto --------- */
+footer {
+  background: #273c75;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a {
+  color: #fbc531;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------- Media Queries para Responsividad --------- */
+
+/* Ajustes para tablets y móviles grandes */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 10px;
+  }
+
+  #sobre-mi img {
+    width: 120px;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  #sobre-mi img {
+    width: 80%;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .proyectos {
+    grid-template-columns: 1fr; /* Las cards se apilan verticalmente */
+  }
+}
   </style>
 </head>
 <body>
