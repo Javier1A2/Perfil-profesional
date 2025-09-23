@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Javier Alejandro González Peredia</title>
+  <style>
+    /* --------- Estilos Generales --------- */
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      background: #f5f6fa;
+      color: #2f3640;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #273c75;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background: #192a56;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: #273c75;
+      margin-bottom: 1rem;
+    }
+
+    /* --------- Sobre mí --------- */
+    #sobre-mi {
+      text-align: center;
+    }
+
+    #sobre-mi img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    /* --------- Proyectos --------- */
+    .proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin-top: 0.8rem;
+    }
+
+    /* --------- Contacto --------- */
+    footer {
+      background: #273c75;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #fbc531;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Javier Alejandro González Peredia</h1>
+    <p>Ingeniero de Software | Desarrollo Web & Móvil | Innovación Tecnológica</p>
+  </header>
+
+  <!-- Menú -->
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Sección Sobre mí -->
+  <section id="sobre-mi">
+    <img src="https://scontent.fntr4-1.fna.fbcdn.net/v/t51.75761-15/489459242_17957323502920513_2341601352671192905_n.webp?stp=dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGMk1hUtHj24hbNvIhkYdMEnEAoZTYx4RScQChlNjHhFPZYiJgioyiyt5PGIFHlSrMeJ-bYRIjuMmmJXGaK0RMP&_nc_ohc=8StHaun2qkcQ7kNvwEN_iQQ&_nc_oc=Adnh5m1Pha1Tme27ijqL956nE3Ze5vKXE6kksYekV4pY_eVMdLYgza9THcviRqweqSI&_nc_zt=23&_nc_ht=scontent.fntr4-1.fna&_nc_gid=VI5l5PvHGAZMvZ3R5ZxeGA&oh=00_AfaeFwdYM3Hwvd0CRIE9eAzbnMz-aWdXVV20Uc8aWBLRVg&oe=68D87CB2" alt="Foto de perfil">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy estudiante de Ingeniería de Software en la Facultad de Telemática, Universidad de Colima. 
+      Me apasiona el desarrollo de software seguro, el diseño de aplicaciones web y móviles, además de la innovación tecnológica. 
+      Actualmente estoy por concluir mi carrera y busco oportunidades para aplicar mis conocimientos en proyectos de impacto.
+    </p>
+  </section>
+
+  <!-- Sección Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proyectos">
+      <div class="card">
+        <img src="https://i.imgur.com/01BxJRQ.jpeg" alt="Sistema de Votaciones">
+        <h3>Sistema de Votaciones</h3>
+        <p>Aplicación web que permite a los usuarios votar entre diferentes partidos y muestra en tiempo real el porcentaje de votos de cada uno. Proyecto desarrollado en equipo utilizando Html, SQL y tecnologías web.</p>
+        <a href="https://javier1a2.github.io/Sistema-de-votaciones/" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/0vUOTxr.jpeg" alt="Proyecto 2">
+        <h3>Estación SatNOGS</h3>
+        <p>Configuración de una Raspberry Pi para recibir y procesar datos satelitales con fines de investigación.</p>
+        <a href="#">Ver en GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/fRh3Ij0.png" alt="Proyecto 3">
+        <h3>Tesis Brecha Digital</h3>
+        <p>Análisis de la brecha digital y su impacto en la inserción laboral en MiPymes de Colima, México.</p>
+        <a href="#">Más información</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/IWgsJIG.jpeg" alt="Juego Jump Man">
+        <h3>Juego Jump Man</h3>
+        <p>Videojuego 2D desarrollado en equipo para el microcontrolador ESP32. Incluye pantalla LCD, joystick y audio I2S. Implementa arquitectura de doble núcleo: uno para la lógica del juego (movimiento, colisiones, puntuaciones) y otro para la gestión de audio.</p>
+        <a href="#">Ver código</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <footer id="contacto">
+    <p>📧 Email: <a href="mailto:javiergp005@gmail.com">javiergp005@gmail.com</a></p>
+    <p>
+      🌐 <a href="https://www.linkedin.com/in/javier-gonzalez-peredia-1813b3340?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEFpKKkOzT5K479an50eLMA%3D%3D" target="_blank">LinkedIn</a> | 
+      💻 <a href="https://github.com/Javier1A2" target="_blank">GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>
