@@ -1,5 +1,11 @@
 const translations = {
   es: {
+    proj1title: "Sistema de Votaciones",
+    proj2title: "Estación SatNOGS",
+    proj3title: "Tesis — Brecha Digital",
+    proj4title: 'Juego "Jump Man" (ESP32)',
+    proj5title: "Sitio web responsivo",
+    proj6title: "Aplicación móvil con Expo",
     portfolio: "Portafolio",
     welcome: "¡Bienvenido!",
     about: "Sobre mí",
@@ -9,6 +15,7 @@ const translations = {
     lead: "Estudiante de Ingeniería de Software",
     btnProjects: "Ver proyectos",
     btnGithub: "Mi GitHub",
+    projGithub: "Ver en GitHub",
     btnContact: "Contactar",
     cvTitle: "¿Quieres saber más sobre mí?",
     cvDesc: "Puedes descargar mi CV aquí:",
@@ -49,6 +56,12 @@ const translations = {
     rights: "Todos los derechos reservados"
   },
   en: {
+    proj1title: "Voting System",
+    proj2title: "SatNOGS Station",
+    proj3title: "Thesis — Digital Divide",
+    proj4title: '"Jump Man" Game (ESP32)',
+    proj5title: "Responsive Website",
+    proj6title: "Mobile App with Expo",
     portfolio: "Portfolio",
     welcome: "Welcome!",
     about: "About me",
@@ -58,6 +71,7 @@ const translations = {
     lead: "Software Engineering Student",
     btnProjects: "See projects",
     btnGithub: "My GitHub",
+    projGithub: "View on GitHub",
     btnContact: "Contact",
     cvTitle: "Want to know more about me?",
     cvDesc: "You can download my CV here:",
