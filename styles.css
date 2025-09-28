@@ -593,71 +593,65 @@ h2.section-title,
 /* Mejoras para móviles pequeños */
 @media (max-width: 600px) {
   html {
-    font-size: 23px; /* ¡Mucho más grande! */
+    font-size: 19px;
   }
   body {
-    font-size: 1.22rem;
+    font-size: 1.18rem;
     padding-bottom: 2.5rem;
   }
   .container {
-    width: 100%;
+    width: 99%;
     padding: 0;
   }
   .hero-card {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.6rem;
+    padding: 1.2rem;
     max-width: 100vw;
-    font-size: 1.22rem;
+    font-size: 1.15rem;
   }
   .profile-photo {
-    width: 130px;
-    height: 130px;
-    margin: 0 auto 1.2rem auto;
-  }
-  .section-title {
-    font-size: 2.5rem;
-  }
-  .hero-info h1 {
-    font-size: 2rem;
-  }
-  .btn, .btn-primary, .btn-outline, .btn-secondary, .menu-toggle {
-    min-height: 48px;
-    min-width: 48px;
-    font-size: 1.22rem;
-    padding: 1rem 1.5rem;
-  }
-  .about {
-    gap: 1.5rem;
-  }
-  .project,
-  .cv-card,
-  .contact-grid > div,
-  aside {
-    padding: 1.5rem;
-    font-size: 1.18rem;
-  }
-  .projects-grid {
-    gap: 1.2rem;
-    grid-template-columns: 1fr !important;
-  }
-  .project img {
-    height: 130px;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1rem auto;
   }
   .skills-list {
     grid-template-columns: 1fr !important;
   }
   .skills-list > div {
-    padding: 1.2rem;
+    padding: 1rem;
   }
   section.block {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+  .projects-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr !important;
+  }
+  .project img {
+    height: 110px;
   }
   .footer-inner {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .nav-wrap {
-    padding: 0.5rem 0.5rem;
+    padding: 0.3rem 0.3rem;
+  }
+  .btn, .btn-primary, .btn-outline, .btn-secondary, .menu-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 1.15rem;
+    padding: 0.8rem 1.3rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .hero-info h1 {
+    font-size: 1.7rem;
+  }
+  .about {
+    flex-direction: column;
+    gap: 1.2rem;
   }
 }
 
