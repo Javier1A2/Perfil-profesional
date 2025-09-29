@@ -114,6 +114,7 @@ const translations = {
 };
 
 function setLang(lang) {
+
   localStorage.setItem('lang', lang);
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -125,6 +126,7 @@ function setLang(lang) {
   // Cambia el texto del botón
   const langBtn = document.getElementById('toggle-lang');
   if (langBtn) langBtn.textContent = lang === 'es' ? 'English' : 'Español';
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   // Inicializa idioma
@@ -233,21 +235,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Corrige menú móvil al redimensionar
-  window.addEventListener('resize', ()=> {
-    if(window.innerWidth > 768){
-      const nav = document.getElementById('mobileNav');
-      if(nav) nav.style.display = 'none';
-      const btn = document.querySelector('.menu-toggle');
-      if(btn) btn.setAttribute('aria-expanded','false');
-    }
+    window.addEventListener('resize', ()=> {
+      if(window.innerWidth > 768){
+        const nav = document.getElementById('mobileNav');
+        if(nav) nav.style.display = 'none';
+        const btn = document.querySelector('.menu-toggle');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      }
+    });
   });
-});
-}
-window.addEventListener('resize', ()=> {
-  if(window.innerWidth > 768){
-    const nav = document.getElementById('mobileNav');
-    if(nav) nav.style.display = 'none';
-    const btn = document.querySelector('.menu-toggle');
-    if(btn) btn.setAttribute('aria-expanded','false');
-  }
-});
