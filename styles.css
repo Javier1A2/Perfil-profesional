@@ -64,11 +64,31 @@ header.site-header{
 }
 
 .nav-wrap{
+
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:1rem;
   padding:0.6rem 0.6rem;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 600px) {
+  .nav-wrap > div[style*="display:flex"] {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: flex-end;
+    min-width: 0;
+    max-width: 100%;
+  }
+  #toggle-lang, #toggle-theme {
+    min-width: 80px;
+    max-width: 100%;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .brand{
@@ -593,11 +613,16 @@ h2.section-title,
 /* Mejoras para móviles pequeños */
 @media (max-width: 600px) {
   html {
-    font-size: 19px;
+    font-size: 15px;
   }
   body {
-    font-size: 1.18rem;
+    font-size: 0.98rem;
     padding-bottom: 2.5rem;
+  }
+  .btn, .btn-primary, .btn-outline, .btn-secondary, .menu-toggle {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    min-width: 70px;
   }
   .container {
     width: 99%;
