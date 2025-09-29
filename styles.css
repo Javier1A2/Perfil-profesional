@@ -210,6 +210,20 @@ body.light-mode nav.main-nav a:hover {
 }
 
 @media (max-width: 700px) {
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+  .hero-card {
+    margin: 0 auto !important;
+    width: 98vw !important;
+    max-width: 98vw !important;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+  }
   .hero {
     display: flex;
     flex-direction: column;
@@ -243,7 +257,7 @@ body.light-mode nav.main-nav a:hover {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .profile-photo{
@@ -616,8 +630,8 @@ h2.section-title,
   .hero-card {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* justify-content: flex-start; */
+    text-align: left;
     width: 100%;
     max-width: 98vw;
     margin-inline: auto !important;
@@ -655,24 +669,28 @@ h2.section-title,
   html {
     font-size: 18px;
   }
-  body {
-    font-size: 1.13rem;
-    padding-bottom: 3rem;
+  .hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2.5rem 0;
+    width: 100%;
+  }
+  .hero-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    max-width: 98vw;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
   .container {
-    width: 98%;
-    padding: 0.5rem 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 94%;
+    margin: 0 auto;
   }
-  .hero-card,
-  .project,
-  .cv-card,
-  .contact-grid > div,
-  aside {
-    padding: 1.1rem;
-    font-size: 1.08rem;
-  }
-  .section-title {
-    font-size: 2rem;
   }
   .hero-info h1 {
     font-size: 1.45rem;
@@ -684,8 +702,9 @@ h2.section-title,
   .skills-list > div {
     padding: 1rem;
   }
+@media (max-width: 900px) {
   .skills-list {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
@@ -730,9 +749,17 @@ h2.section-title,
     height: 110px;
     margin: 0 auto 1rem auto;
   }
+@media (max-width: 600px) {
   .skills-list {
     grid-template-columns: 1fr !important;
   }
+}
+/* HABILIDADES: 3 columnas en escritorio */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
   .skills-list > div {
     padding: 1rem;
   }
