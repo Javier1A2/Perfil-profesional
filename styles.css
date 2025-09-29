@@ -680,7 +680,7 @@ a:focus, button:focus, .btn:focus {
     display: none;
   }
   #mobileNav {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
