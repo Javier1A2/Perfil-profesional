@@ -126,99 +126,100 @@ function setLang(lang) {
   const langBtn = document.getElementById('toggle-lang');
   if (langBtn) langBtn.textContent = lang === 'es' ? 'English' : 'Español';
 
-// Inicializa idioma
-const userLang = localStorage.getItem('lang') || 'es';
-setLang(userLang);
-
-// Toggle idioma
-if (typeof langBtn !== 'undefined' && langBtn) {
-  langBtn.addEventListener('click', function() {
-    setLang(document.documentElement.lang === 'es' ? 'en' : 'es');
-  });
-}
-
-// Toggle modo claro/oscuro
-const toggleBtn = document.getElementById('toggle-theme');
-const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-if (localStorage.getItem('theme') === 'light' || (prefersLight && !localStorage.getItem('theme'))) {
-  document.body.classList.add('light-mode');
-  if(toggleBtn) toggleBtn.textContent = '🌙';
-}
-if(toggleBtn) {
-  toggleBtn.addEventListener('click', function() {
-    document.body.classList.toggle('light-mode');
-    if(document.body.classList.contains('light-mode')) {
-      localStorage.setItem('theme', 'light');
-      toggleBtn.textContent = '🌙';
-    } else {
-      localStorage.setItem('theme', 'dark');
-      toggleBtn.textContent = '☀️';
-    }
-  });
-}
-
-// Ilumina habilidades por nivel (si tienes este script)
-document.querySelectorAll('.skills-legend span').forEach(function(legend){
-  legend.addEventListener('mouseenter', function(){
-    const level = legend.getAttribute('data-skill');
-    document.querySelectorAll('.skills-list .skill-dot.'+level).forEach(function(dot){
-      dot.style.boxShadow = level === 'avanzado'
-        ? '0 0 0 4px #10ac8490, 0 1px 4px rgba(0,0,0,0.12)'
-        : level === 'intermedio'
-        ? '0 0 0 4px #fbc53190, 0 1px 4px rgba(0,0,0,0.12)'
-        : '0 0 0 4px #e1705590, 0 1px 4px rgba(0,0,0,0.12)';
-      dot.style.borderColor = level === 'avanzado'
-        ? '#10ac84'
-        : level === 'intermedio'
-        ? '#fbc531'
-        : '#e17055';
-      dot.style.filter = 'brightness(1.2)';
-      if(dot.parentElement) {
-        dot.parentElement.style.background = level === 'avanzado'
-          ? 'rgba(16,172,132,0.13)'
-          : level === 'intermedio'
-          ? 'rgba(251,197,49,0.13)'
-          : 'rgba(225,112,85,0.13)';
-        dot.parentElement.style.borderRadius = '6px';
-        dot.parentElement.style.color = '#fff';
-        dot.parentElement.style.fontWeight = 'bold';
-      }
-    });
-  });
-  legend.addEventListener('mouseleave', function(){
-    const level = legend.getAttribute('data-skill');
-    document.querySelectorAll('.skills-list .skill-dot.'+level).forEach(function(dot){
-      dot.style.boxShadow = '';
-      dot.style.borderColor = '';
-      dot.style.filter = '';
-      if(dot.parentElement) {
-        dot.parentElement.style.background = '';
-        dot.parentElement.style.borderRadius = '';
-        dot.parentElement.style.color = '';
-        dot.parentElement.style.fontWeight = '';
-      }
-    });
-  });
-});
-
-// Menú móvil (si lo usas)
-function toggleMobileNav(){
-  const nav = document.getElementById('mobileNav');
-  const btn = document.querySelector('.menu-toggle');
-  if(!nav) return;
-  const visible = nav.style.display === 'flex';
-  nav.style.display = visible ? 'none' : 'flex';
-  btn.setAttribute('aria-expanded', String(!visible));
-  nav.setAttribute('aria-hidden', String(visible));
-  // Focus al primer enlace cuando se abre
-  if (!visible) {
-    const firstLink = nav.querySelector('a');
-    if (firstLink) firstLink.focus();
-  }
-}
-
-// Cierra el menú móvil al hacer clic en un enlace
 document.addEventListener('DOMContentLoaded', function() {
+  // Inicializa idioma
+  const userLang = localStorage.getItem('lang') || 'es';
+  setLang(userLang);
+
+  // Toggle idioma
+  const langBtn = document.getElementById('toggle-lang');
+  if (langBtn) {
+    langBtn.addEventListener('click', function() {
+      setLang(document.documentElement.lang === 'es' ? 'en' : 'es');
+    });
+  }
+
+  // Toggle modo claro/oscuro
+  const toggleBtn = document.getElementById('toggle-theme');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  if (localStorage.getItem('theme') === 'light' || (prefersLight && !localStorage.getItem('theme'))) {
+    document.body.classList.add('light-mode');
+    if(toggleBtn) toggleBtn.textContent = '🌙';
+  }
+  if(toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      document.body.classList.toggle('light-mode');
+      if(document.body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      } else {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+  }
+
+  // Ilumina habilidades por nivel (si tienes este script)
+  document.querySelectorAll('.skills-legend span').forEach(function(legend){
+    legend.addEventListener('mouseenter', function(){
+      const level = legend.getAttribute('data-skill');
+      document.querySelectorAll('.skills-list .skill-dot.'+level).forEach(function(dot){
+        dot.style.boxShadow = level === 'avanzado'
+          ? '0 0 0 4px #10ac8490, 0 1px 4px rgba(0,0,0,0.12)'
+          : level === 'intermedio'
+          ? '0 0 0 4px #fbc53190, 0 1px 4px rgba(0,0,0,0.12)'
+          : '0 0 0 4px #e1705590, 0 1px 4px rgba(0,0,0,0.12)';
+        dot.style.borderColor = level === 'avanzado'
+          ? '#10ac84'
+          : level === 'intermedio'
+          ? '#fbc531'
+          : '#e17055';
+        dot.style.filter = 'brightness(1.2)';
+        if(dot.parentElement) {
+          dot.parentElement.style.background = level === 'avanzado'
+            ? 'rgba(16,172,132,0.13)'
+            : level === 'intermedio'
+            ? 'rgba(251,197,49,0.13)'
+            : 'rgba(225,112,85,0.13)';
+          dot.parentElement.style.borderRadius = '6px';
+          dot.parentElement.style.color = '#fff';
+          dot.parentElement.style.fontWeight = 'bold';
+        }
+      });
+    });
+    legend.addEventListener('mouseleave', function(){
+      const level = legend.getAttribute('data-skill');
+      document.querySelectorAll('.skills-list .skill-dot.'+level).forEach(function(dot){
+        dot.style.boxShadow = '';
+        dot.style.borderColor = '';
+        dot.style.filter = '';
+        if(dot.parentElement) {
+          dot.parentElement.style.background = '';
+          dot.parentElement.style.borderRadius = '';
+          dot.parentElement.style.color = '';
+          dot.parentElement.style.fontWeight = '';
+        }
+      });
+    });
+  });
+
+  // Menú móvil (si lo usas)
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    const btn = document.querySelector('.menu-toggle');
+    if(!nav) return;
+    const visible = nav.style.display === 'flex';
+    nav.style.display = visible ? 'none' : 'flex';
+    btn.setAttribute('aria-expanded', String(!visible));
+    nav.setAttribute('aria-hidden', String(visible));
+    // Focus al primer enlace cuando se abre
+    if (!visible) {
+      const firstLink = nav.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
+  }
+
+  // Cierra el menú móvil al hacer clic en un enlace
   const mobileNav = document.getElementById('mobileNav');
   if (mobileNav) {
     mobileNav.querySelectorAll('a').forEach(function(link) {
@@ -230,6 +231,16 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Corrige menú móvil al redimensionar
+  window.addEventListener('resize', ()=> {
+    if(window.innerWidth > 768){
+      const nav = document.getElementById('mobileNav');
+      if(nav) nav.style.display = 'none';
+      const btn = document.querySelector('.menu-toggle');
+      if(btn) btn.setAttribute('aria-expanded','false');
+    }
+  });
 });
 }
 window.addEventListener('resize', ()=> {
