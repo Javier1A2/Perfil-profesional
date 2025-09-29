@@ -205,21 +205,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Menú móvil (si lo usas)
-  window.toggleMobileNav = function(){
-    const nav = document.getElementById('mobileNav');
-    const btn = document.querySelector('.menu-toggle');
-    if(!nav) return;
-    const visible = nav.style.display === 'flex';
-    nav.style.display = visible ? 'none' : 'flex';
-    btn.setAttribute('aria-expanded', String(!visible));
-    nav.setAttribute('aria-hidden', String(visible));
-    // Focus al primer enlace cuando se abre
-    if (!visible) {
-      const firstLink = nav.querySelector('a');
-      if (firstLink) firstLink.focus();
-    }
+
+// Menú móvil (debe estar global para el onclick del HTML)
+window.toggleMobileNav = function(){
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.menu-toggle');
+  if(!nav) return;
+  const visible = nav.style.display === 'flex';
+  nav.style.display = visible ? 'none' : 'flex';
+  btn.setAttribute('aria-expanded', String(!visible));
+  nav.setAttribute('aria-hidden', String(visible));
+  // Focus al primer enlace cuando se abre
+  if (!visible) {
+    const firstLink = nav.querySelector('a');
+    if (firstLink) firstLink.focus();
   }
+}
 
   // Cierra el menú móvil al hacer clic en un enlace
   const mobileNav = document.getElementById('mobileNav');
